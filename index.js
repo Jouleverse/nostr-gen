@@ -54,7 +54,9 @@ async function main() {
 		"star.j": "da05b466e86142908a32bfc163d723139fcbce0ad6f21f37d1088ac044381d38",
 		"arki.j": "eeeba83bc9fb3cc280da266aab3a451ed13f918f453d7317d5747c459e6d1d56"
 	};
-	var total = await JNSDAO_V_Contract.totalSupply();
+	console.log('manually configured names: ', Object.keys(name2key));
+
+	const total = await JNSDAO_V_Contract.totalSupply();
 
 	for (var tokenId=0;tokenId<total;tokenId++){
 		var owner = await JNSDAO_V_Contract.ownerOf(tokenId); // todo: handle exception
@@ -73,8 +75,17 @@ async function main() {
 		}
 	}
 
+	//order by key
+	const ordered = Object.keys(name2key).sort().reduce(
+		(obj, key) => {
+			obj[key] = name2key[key];
+			return obj;
+		},
+		{}
+	);
+	const output = { "names": ordered };
 	//write to file
-	saveJson(name2key)
+	saveJson(output);
 }
 
 main()
