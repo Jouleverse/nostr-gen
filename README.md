@@ -8,5 +8,13 @@
 
 ## Possible usage
 
-node index.js > /path/to/nostr.json
+/path/to/checkupdate.sh
+
+## Crontab  setup
+
+0 * * * * /path/to/nostr-gen/checkupdate.sh > /dev/null
+
+## Contributors
+
+seed.j evan.j
 
