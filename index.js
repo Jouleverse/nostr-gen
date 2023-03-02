@@ -7,7 +7,8 @@ const {ethers} = require('ethers');
 const {writeFileSync} = require('fs');
 
 //const rpcUrl = "https://rpc.jnsdao.com:8503";
-const rpcUrl = "http://rpc.jnsdao.com:8502";
+//const rpcUrl = "http://rpc.jnsdao.com:8502";
+const rpcUrl = "http://127.0.0.1:8501";
 const provider = new ethers.JsonRpcProvider(rpcUrl,3666);
 
 function saveJson(data){
@@ -28,7 +29,7 @@ async function main() {
 	const JNSDAO_V_Contract = new ethers.Contract(jnsdaov.jnsdaov_contract_address, jnsdaov.jnsdaov_ABI, provider);
 
 	var name2key = { // manual setup for transition...
-		"io3art.j": "c72ae5cbf49894988581779a1abc93b02f348ea0d667b7ecf1c6493c59f0f2a8",
+		/*"io3art.j": "c72ae5cbf49894988581779a1abc93b02f348ea0d667b7ecf1c6493c59f0f2a8",
 		"c.j": "9a7aa4ac2b527f5b9a1348ce9f5d7f9886b40c77e25eda71a23e7d361a824b34",
 		"fang.j": "43780b3ef5241fb68ec648db7b93b2ed3332203e7bbf6145ff20993f1564572a",
 		"music.j": "b520deb50b5f3ef658995a102f923ee9ec2c1d91f43125cc54a92291933070e2",
@@ -52,7 +53,7 @@ async function main() {
 		"nfl.j": "759865d93c915e920f3bd3958fb8597a1db577c79833329b000b6d72f74e403d",
 		"junbenyu.j": "4030f9811a0c14f671ec54e1021661f57948884af844192972e5971564851932",
 		"star.j": "da05b466e86142908a32bfc163d723139fcbce0ad6f21f37d1088ac044381d38",
-		"arki.j": "eeeba83bc9fb3cc280da266aab3a451ed13f918f453d7317d5747c459e6d1d56"
+		"arki.j": "eeeba83bc9fb3cc280da266aab3a451ed13f918f453d7317d5747c459e6d1d56"*/
 	};
 	console.log('manually configured names: ', Object.keys(name2key));
 
