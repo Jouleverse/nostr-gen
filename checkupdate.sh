@@ -1,7 +1,7 @@
 #!/bin/bash
 
-WORKING_DIR='/path/to/nostr-gen'
-RELEASE_DIR='/path/to/.well-known'
+WORKING_DIR='/home/nodeops/nostr-gen'
+RELEASE_DIR='/home/nodeops/jnsdao/.well-known'
 CONFIG_FILE='nostr.json'
 
 ## go to working dir
@@ -22,7 +22,7 @@ then
 	git pull
 	git status
 
-	git ci -a -m 'update nostr config'
+	git commit -a -m 'update nostr config'
 	git push
 
 fi
