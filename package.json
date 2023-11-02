@@ -9,6 +9,6 @@
   "author": "evan.j@jnsdao.com",
   "license": "MIT",
   "dependencies": {
-    "ethers": "^6.0.2"
+    "ethers": "^6.8.1"
   }
 }

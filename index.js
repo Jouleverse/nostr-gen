@@ -8,7 +8,8 @@ const {writeFileSync} = require('fs');
 
 //const rpcUrl = "https://rpc.jnsdao.com:8503";
 //const rpcUrl = "http://rpc.jnsdao.com:8502";
-const rpcUrl = "http://127.0.0.1:8501";
+//const rpcUrl = "http://127.0.0.1:8501";
+const rpcUrl = "http://172.17.0.1:8501";
 const provider = new ethers.JsonRpcProvider(rpcUrl,3666);
 
 function saveJson(data){

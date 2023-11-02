@@ -1,7 +1,7 @@
 #!/bin/bash
 
-WORKING_DIR='/home/nodeops/nostr-gen'
-RELEASE_DIR='/home/nodeops/jnsdao/.well-known'
+WORKING_DIR='/ng'
+RELEASE_DIR='/ng/jnsdao/static/.well-known'
 CONFIG_FILE='nostr.json'
 
 ## go to working dir
